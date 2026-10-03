@@ -1,7 +1,7 @@
 ############ HOMOLOGACAO DA IMAGEM ############
 ===== IMAGEM =====
-9c6b91dc9da974a663d54999e9bfb7a353d7c10a2cda7362f6f34a5f73c2a1ca  /home/levi.abreu/ubuntu_engine_hpc.sif
--rwxr-xr-x 1 levi.abreu levi.abreu 2.9G Sep 27 21:44 /home/levi.abreu/ubuntu_engine_hpc.sif
+9c6b91dc9da974a663d54999e9bfb7a353d7c10a2cda7362f6f34a5f73c2a1ca  /home/seu.usuario/ubuntu_engine_hpc.sif
+-rwxr-xr-x 1 seu.usuario seu.usuario 2.9G Sep 27 21:44 /home/seu.usuario/ubuntu_engine_hpc.sif
 Sun Sep 27 22:08:36 -03 2026
 apptainer version 1.4.1-1.el9
 
