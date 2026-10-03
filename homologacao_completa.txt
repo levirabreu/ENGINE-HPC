@@ -1,0 +1,635 @@
+############ HOMOLOGACAO DA IMAGEM ############
+===== IMAGEM =====
+9c6b91dc9da974a663d54999e9bfb7a353d7c10a2cda7362f6f34a5f73c2a1ca  /home/levi.abreu/ubuntu_engine_hpc.sif
+-rwxr-xr-x 1 levi.abreu levi.abreu 2.9G Sep 27 21:44 /home/levi.abreu/ubuntu_engine_hpc.sif
+Sun Sep 27 22:08:36 -03 2026
+apptainer version 1.4.1-1.el9
+
+===== SISTEMA OPERACIONAL =====
+PRETTY_NAME="Ubuntu 26.04.1 LTS"
+VERSION="26.04.1 LTS (Resolute Raccoon)"
+x86_64
+gcc (Ubuntu 15.2.0-16ubuntu1) 15.2.0
+
+===== VERSOES DOS SOFTWARES =====
+Python 3.14.7
+julia version 1.13.1
+R version 4.5.3 (2026-03-11) -- "Reassured Reassurer"
+conda 26.7.2
+
+===== PYTHON: bibliotecas (pip) =====
+absl-py==2.5.0
+anaconda-anon-usage==0.8.1
+anaconda-auth==0.15.2
+anaconda-channel-guide==0.2.0
+anaconda-cli-base==0.9.1
+annotated-doc==0.0.5
+annotated-types==0.7.0
+anyio==4.12.1
+archspec==0.2.6
+boltons==25.0.0
+brotlicffi==1.2.0.1
+build==1.5.1
+cbcbox==2.935
+certifi==2026.7.22
+cffi==2.1.1
+charset-normalizer==3.4.7
+click==8.4.1
+conda==26.7.2
+conda-anaconda-telemetry==0.3.0
+conda-anaconda-tos==0.2.2
+conda-content-trust==0.3.2
+conda_index==0.12.1
+conda-libmamba-solver==26.7.0
+conda-lockfiles==0.2.1
+conda-package-handling==2.5.0
+conda_package_streaming==0.13.0
+conda-pypi==0.11.0
+conda-rattler-solver==0.1.1
+conda-self==0.2.1
+contourpy==1.4.0
+cryptography==50.0.0
+cycler==0.12.1
+distro==1.9.0
+docplex==2.32.264
+filelock==3.29.4
+fjsplib==0.0.2
+fonttools==4.63.0
+formulaic==1.2.2
+frozendict==2.4.7
+h11==0.16.0
+highspy==1.15.1
+httpcore==1.0.9
+httpx==0.28.1
+idna==3.18
+immutabledict==4.3.1
+installer==1.0.1
+interface_meta==2.0.1
+jaraco.classes==3.4.0
+jaraco.context==6.1.0
+jaraco.functools==4.4.0
+jeepney==0.7.1
+Jinja2==3.1.6
+joblib==1.5.3
+keyring==25.7.0
+kiwisolver==1.5.0
+libmambapy==2.3.2
+markdown-it-py==4.2.0
+MarkupSafe==3.0.3
+matplotlib==3.11.2
+mdurl==0.1.2
+menuinst==2.5.2
+mip==2.0.0
+more-itertools==11.0.2
+msgpack==1.2.1
+narwhals==2.23.0
+numpy==2.5.3
+ortools==9.15.6755
+packaging==26.3
+pandas==3.0.6
+patsy==1.0.2
+pillow==12.3.0
+pip==26.2.1
+pkce==1.0.3
+platformdirs==4.11.0
+pluggy==1.6.0
+protobuf==6.33.6
+psplib==0.4.0
+py-rattler==0.25.0
+pycosat==0.6.6
+pycparser==3.0
+pydantic==2.13.4
+pydantic_core==2.46.4
+pydantic-settings==2.14.2
+Pygments==2.20.0
+pyjobshop==0.0.9
+PyJWT==2.13.0
+pyparsing==3.3.2
+pyproject_hooks==1.2.0
+PySocks==1.7.1
+python-dateutil==2.9.0.post0
+python-dotenv==1.2.2
+pyvrp==0.14.0
+readchar==4.2.2
+requests==2.34.2
+rich==15.0.0
+ruamel.yaml==0.18.16
+ruamel.yaml.clib==0.2.14
+scikit-learn==1.9.1
+scipy==1.18.0
+seaborn==0.13.2
+SecretStorage==3.5.0
+semver==3.0.4
+setuptools==83.0.0
+shellingham==1.5.4
+six==1.17.0
+statsmodels==0.15.0
+threadpoolctl==3.5.0
+tomli==2.4.0
+tomli_w==1.2.0
+tomlkit==0.15.1
+tqdm==4.70.0
+truststore==0.10.4
+typer==0.25.1
+typing_extensions==4.16.0
+typing-inspection==0.4.3
+unearth==0.18.2
+urllib3==2.7.0
+VRPSolverEasy==0.1.4
+wheel==0.47.0
+wrapt==2.2.1
+zstandard==0.25.0
+
+===== JULIA: ambiente principal =====
+Julia 1.13.1
+Status `/opt/.julia/environments/v1.13/Project.toml`
+  [a076750e] CPLEX v1.2.0
+  [336ed68f] CSV v1.1.0
+  [a93c6f00] DataFrames v1.8.2
+  [31c24e10] Distributions v0.25.131
+  [4076af6c] JuMP v1.31.2
+  [2913bbd2] StatsBase v0.34.13
+INFO:    Cleanup error: while stopping driver for /var/lib/apptainer/mnt/session/final: fuse-overlayfs exited: fuse: reading device: Software caused connection abort
+
+===== JULIA: ambiente principal (com dependencias) =====
+Status `/opt/.julia/environments/v1.13/Manifest.toml`
+  [7d9f7c33] Accessors v0.1.45
+  [66dad0bd] AliasTables v1.1.3
+  [fa961155] CEnum v0.5.0
+  [a076750e] CPLEX v1.2.0
+  [336ed68f] CSV v1.1.0
+  [523fee87] CodecBzip2 v0.8.5
+  [944b1d66] CodecZlib v0.7.9
+  [38540f10] CommonSolve v0.2.14
+  [bbf7d656] CommonSubexpressions v0.3.1
+  [34da2185] Compat v4.18.1
+  [a33af91c] CompositionsBase v0.1.2
+  [187b0558] ConstructionBase v1.6.0
+  [a8cc5b0e] Crayons v4.2.0
+  [9a962f9c] DataAPI v1.16.0
+  [a93c6f00] DataFrames v1.8.2
+  [48204bd6] DataStrings v1.1.0
+  [864edb3b] DataStructures v0.19.6
+  [e2d170a0] DataValueInterfaces v1.0.0
+  [163ba53b] DiffResults v1.1.0
+  [b552c78f] DiffRules v1.16.0
+  [31c24e10] Distributions v0.25.131
+  [ffbed154] DocStringExtensions v0.9.5
+  [41ac09f5] Durations v1.4.0
+  [1a297f60] FillArrays v1.17.1
+  [f6369f11] ForwardDiff v1.4.6
+  [a0844989] Gamma v1.2.0
+  [34004b35] HypergeometricFunctions v0.3.30
+⌅ [842dd82b] InlineStrings v1.4.6
+  [3587e190] InverseFunctions v0.1.17
+  [41ab1584] InvertedIndices v1.3.1
+  [92d709cd] IrrationalConstants v0.2.6
+  [82899510] IteratorInterfaceExtensions v1.0.0
+  [692b3bcd] JLLWrappers v1.8.0
+  [682c06a0] JSON v1.9.0
+  [4076af6c] JuMP v1.31.2
+  [b964fa9f] LaTeXStrings v1.4.1
+  [2ab3a3ac] LogExpFunctions v1.0.2
+  [1914dd2f] MacroTools v0.5.16
+  [b8f27783] MathOptInterface v1.54.0
+  [e1d29d7a] Missings v1.2.0
+  [d8a4904e] MutableArithmetics v1.8.1
+  [77ba4419] NaNMath v1.1.4
+  [bac558e1] OrderedCollections v2.0.1
+  [90014a1f] PDMats v0.11.41
+  [69de0a69] Parsers v3.0.0
+  [2dfb63ee] PooledArrays v1.4.3
+  [aea7be01] PrecompileTools v1.3.4
+  [21216c6a] Preferences v1.6.0
+  [08abe8d2] PrettyTables v3.4.8
+  [43287f4e] PtrArrays v1.4.0
+  [1fd47b50] QuadGK v2.11.3
+  [189a3867] Reexport v1.2.2
+  [79098fc4] Rmath v0.9.0
+  [f2b01f46] Roots v3.0.8
+  [91c51154] SentinelArrays v1.4.10
+  [a2af1166] SortingAlgorithms v1.2.3
+  [276daf66] SpecialFunctions v2.9.0
+  [1e83bf80] StaticArraysCore v1.4.4
+  [10745b16] Statistics v1.11.5
+  [82ae8749] StatsAPI v1.8.0
+  [2913bbd2] StatsBase v0.34.13
+  [4c63d2b9] StatsFuns v2.2.1
+⌅ [892a3eda] StringManipulation v0.5.0
+  [ec057cc2] StructUtils v2.9.2
+  [3783bdb8] TableTraits v1.0.1
+  [bd369af6] Tables v1.14.0
+  [3bb67fe8] TranscodingStreams v0.11.3
+  [6e34b625] Bzip2_jll v1.0.9+0
+  [efe28fd5] OpenSpecFun_jll v0.5.6+0
+  [f50d1b31] Rmath_jll v0.5.2+0
+  [0dad84c5] ArgTools v1.1.2
+  [56f22d72] Artifacts v1.11.0
+  [2a0f44e3] Base64 v1.11.0
+  [ade2ca70] Dates v1.11.0
+  [f43a241f] Downloads v1.7.0
+  [7b1f6079] FileWatching v1.11.0
+  [9fa8497b] Future v1.11.0
+  [b77e0a4c] InteractiveUtils v1.11.0
+  [ac6e5ff7] JuliaSyntaxHighlighting v1.12.0
+  [b27032c2] LibCURL v1.0.0
+  [8f399da3] Libdl v1.11.0
+  [37e2e46d] LinearAlgebra v1.13.0
+  [56ddb016] Logging v1.11.0
+  [d6f4376e] Markdown v1.11.0
+  [a63ad114] Mmap v1.11.0
+  [ca575930] NetworkOptions v1.3.0
+  [de0858da] Printf v1.11.0
+  [3fa0cd96] REPL v1.11.0
+  [9a3f8284] Random v1.11.0
+  [ea8e919c] SHA v1.0.0
+  [9e88b42a] Serialization v1.11.0
+  [6462fe0b] Sockets v1.11.0
+  [2f01184e] SparseArrays v1.13.0
+  [f489334b] StyledStrings v1.11.0
+  [4607b0f0] SuiteSparse
+  [fa267f1f] TOML v1.0.3
+  [8dfed614] Test v1.11.0
+  [cf7118a7] UUIDs v1.11.0
+  [4ec0a83e] Unicode v1.11.0
+  [e66e0078] CompilerSupportLibraries_jll v1.5.5+2
+  [deac9b47] LibCURL_jll v8.18.0+1
+  [29816b5a] LibSSH2_jll v1.11.104+0
+  [14a3606d] MozillaCACerts_jll v2026.8.13
+  [4536629a] OpenBLAS_jll v0.3.30+0
+  [05823500] OpenLibm_jll v0.8.7+0
+  [458c3c95] OpenSSL_jll v3.5.6+0
+  [bea87d4a] SuiteSparse_jll v7.10.1+0
+  [83775a58] Zlib_jll v1.3.1+2
+  [3161d3a3] Zstd_jll v1.5.7+1
+  [8e850b90] libblastrampoline_jll v5.15.0+0
+  [8e850ede] nghttp2_jll v1.67.1+0
+Info Packages marked with ⌅ have new versions available but compatibility constraints restrict them from upgrading. To see why use `status --outdated -m`
+
+===== JULIA: brkga-env =====
+Status `/opt/.julia/environments/brkga-env/Project.toml`
+⌃ [028a27d2] BrkgaMpIpr v1.0.0
+Info Packages marked with ⌃ have new versions available and may be upgradable.
+
+===== JULIA: rulemine-env =====
+Status `/opt/.julia/environments/rulemine-env/Project.toml`
+  [26420b10] RuleMiner v0.8.0
+INFO:    Cleanup error: while stopping driver for /var/lib/apptainer/mnt/session/final: fuse-overlayfs exited: fuse: reading device: Software caused connection abort
+
+===== R: pacotes instalados =====
+            Package       Version   
+base        "base"        "4.5.3"   
+codetools   "codetools"   "0.2-20"  
+compiler    "compiler"    "4.5.3"   
+data.table  "data.table"  "1.18.6.1"
+datasets    "datasets"    "4.5.3"   
+fs          "fs"          "2.1.0"   
+graphics    "graphics"    "4.5.3"   
+grDevices   "grDevices"   "4.5.3"   
+grid        "grid"        "4.5.3"   
+irace       "irace"       "4.4.4"   
+matrixStats "matrixStats" "1.5.0"   
+methods     "methods"     "4.5.3"   
+parallel    "parallel"    "4.5.3"   
+R6          "R6"          "2.6.1"   
+Rcpp        "Rcpp"        "1.1.2"   
+spacefillr  "spacefillr"  "0.4.0"   
+splines     "splines"     "4.5.3"   
+stats       "stats"       "4.5.3"   
+stats4      "stats4"      "4.5.3"   
+tcltk       "tcltk"       "4.5.3"   
+tools       "tools"       "4.5.3"   
+utils       "utils"       "4.5.3"   
+withr       "withr"       "3.0.3"   
+
+===== CPLEX (versao do solver) =====
+
+Welcome to IBM(R) ILOG(R) CPLEX(R) Interactive Optimizer 22.2.0.0
+  with Simplex, Mixed Integer & Barrier Optimizers
+5725-A06 5725-A29 5724-Y48 5724-Y49 5724-Y54 5724-Y55 5655-Y21
+Copyright IBM Corp. 1988, 2026.  All Rights Reserved.
+
+Type 'help' for a list of available commands.
+Type 'help' followed by a command name for more
+
+===== CPLEX / CP Optimizer: arquivos =====
+cplex
+cplexamp
+libcplex2220.so
+cpoptimizer
+libcp_wrap_cpp_java2220.so
+
+===== TESTES FUNCIONAIS =====
+--- Python: docplex.cp ---
+OK, x = 3
+--- Python: mip (HiGHS) ---
+Running HiGHS 1.15.1 (git hash: 04024d7): Copyright (c) 2026 under MIT licence terms
+Includes third-party software components, see THIRD_PARTY_NOTICES.md for full details
+MIP has 0 rows; 1 col; 0 nonzeros; 1 integer variables (1 binary)
+Presolving model
+0 rows, 0 cols, 0 nonzeros 0s
+0 rows, 0 cols, 0 nonzeros 0s
+Presolve reductions: rows 0(-0); columns 0(-1); nonzeros 0(-0) - Reduced to empty
+Presolve: Optimal
+
+Src: B => Branching; C => Central rounding; F => Feasibility pump; H => Heuristic;
+     I => Shifting; J => Feasibility jump; L => Sub-MIP; P => Empty MIP; R => Randomized rounding;
+     S => Solve LP; T => Evaluate node; U => Unbounded; X => User solution; Y => HiGHS solution;
+     Z => ZI Round; l => Trivial lower; p => Trivial point; u => Trivial upper; z => Trivial zero
+
+        Nodes      |    B&B Tree     |            Objective Bounds              |  Dynamic Constraints |       Work      
+Src  Proc. InQueue |  Leaves   Expl. | BestBound       BestSol              Gap |   Cuts   InLp Confl. | LpIters     Time
+
+         0       0         0   0.00%   5               5                  0.00%        0      0      0         0     0.0s
+
+Solving report
+  Status            Optimal
+  Primal bound      5
+  Dual bound        5
+  Gap               0% (tolerance: 0.01%)
+  P-D integral      0
+  Solution status   feasible
+                    5 (objective)
+                    0 (bound viol.)
+                    0 (int. viol.)
+                    0 (row viol.)
+  Timing            0.01
+                    0.00 (Presolve)
+                    0.00 (Solve)
+                    0.00 (Postsolve)
+  Max sub-MIP depth 0
+  Nodes             0
+  Repair LPs        0
+  LP iterations     0
+OK, status OptimizationStatus.OPTIMAL obj 5.0
+--- Julia: JuMP + CPLEX (MIP) ---
+OK, OPTIMAL obj = 9.0
+--- R: irace ---
+OK, irace 4.4.4 
+
+===== PACOTES DO SISTEMA (dpkg) =====
+adduser 3.153ubuntu1
+alsa-topology-conf 1.2.5.1-3build1
+alsa-ucm-conf 1.2.15.3-1ubuntu1.5
+apt 3.2.0
+base-files 14ubuntu6.2
+base-passwd 3.6.8
+bash 5.3-2ubuntu1
+bash-completion 1:2.16.0-8build1
+binutils 2.46-3ubuntu2
+binutils-common:amd64 2.46-3ubuntu2
+binutils-x86-64-linux-gnu 2.46-3ubuntu2
+bsdutils 1:2.41.3-3ubuntu2.2
+build-essential 12.12ubuntu2.26.04.2
+bzip2 1.0.8-6ubuntu0.1
+ca-certificates 20260601~26.04.1
+ca-certificates-java 20260311
+cmake 4.2.3-2ubuntu2
+cmake-data 4.2.3-2ubuntu2
+coreutils 9.5-1ubuntu2+0.0.0~ubuntu25
+coreutils-from-uutils 0.0.0~ubuntu25
+cpp 4:15.2.0-5ubuntu1
+cpp-15 15.2.0-16ubuntu1
+cpp-15-x86-64-linux-gnu 15.2.0-16ubuntu1
+cpp-x86-64-linux-gnu 4:15.2.0-5ubuntu1
+curl 8.18.0-1ubuntu2.7
+dash 0.5.12-12ubuntu3
+dbus 1.16.2-2ubuntu4
+dbus-bin 1.16.2-2ubuntu4
+dbus-daemon 1.16.2-2ubuntu4
+dbus-session-bus-common 1.16.2-2ubuntu4
+dbus-system-bus-common 1.16.2-2ubuntu4
+debconf 1.5.92
+debianutils 5.23.2build1
+diffutils 1:3.12-1ubuntu0.1
+dirmngr 2.4.8-4ubuntu3.1
+dpkg 1.23.7ubuntu1
+dpkg-dev 1.23.7ubuntu1
+e2fsprogs 1.47.2-3ubuntu4
+fakeroot 1.37.2-1
+findutils 4.10.0-3build2
+fontconfig-config 2.17.1-3ubuntu1
+fonts-dejavu-core 2.37-8build1
+fonts-dejavu-mono 2.37-8build1
+g++ 4:15.2.0-5ubuntu1
+g++-15 15.2.0-16ubuntu1
+g++-15-x86-64-linux-gnu 15.2.0-16ubuntu1
+g++-x86-64-linux-gnu 4:15.2.0-5ubuntu1
+gcc 4:15.2.0-5ubuntu1
+gcc-15 15.2.0-16ubuntu1
+gcc-15-base:amd64 15.2.0-16ubuntu1
+gcc-15-x86-64-linux-gnu 15.2.0-16ubuntu1
+gcc-16-base:amd64 16-20260322-1ubuntu1
+gcc-x86-64-linux-gnu 4:15.2.0-5ubuntu1
+gdb 17.1-2ubuntu1
+gnu-coreutils 9.7-3ubuntu2.1
+gnupg 2.4.8-4ubuntu3.1
+gnupg-l10n 2.4.8-4ubuntu3.1
+gnupg-utils 2.4.8-4ubuntu3.1
+gpg 2.4.8-4ubuntu3.1
+gpg-agent 2.4.8-4ubuntu3.1
+gpg-wks-client 2.4.8-4ubuntu3.1
+gpgconf 2.4.8-4ubuntu3.1
+gpgsm 2.4.8-4ubuntu3.1
+gpgv 2.4.8-4ubuntu3.1
+grep 3.12-1
+gzip 1.14-1~exp2ubuntu1.1
+hostname 3.25build1
+htop 3.4.1-5build2
+init-system-helpers 1.69
+java-common 0.77
+krb5-locales 1.22.1-2ubuntu4.1
+libacl1:amd64 2.3.2-2
+libalgorithm-diff-perl 1.201-1
+libalgorithm-diff-xs-perl 0.04-9
+libalgorithm-merge-perl 0.08-5
+libapparmor1:amd64 5.0.2-0ubuntu1~26.04.1
+libapt-pkg7.0:amd64 3.2.0
+libarchive13t64:amd64 3.8.5-1ubuntu2.2
+libasan8:amd64 16-20260322-1ubuntu1
+libasound2-data 1.2.15.3-1ubuntu1.1
+libasound2t64:amd64 1.2.15.3-1ubuntu1.1
+libassuan9:amd64 3.0.2-2build1
+libatomic1:amd64 16-20260322-1ubuntu1
+libattr1:amd64 1:2.5.2-4ubuntu0.1
+libaudit-common 1:4.1.2-1ubuntu0.1
+libaudit1:amd64 1:4.1.2-1ubuntu0.1
+libavahi-client3:amd64 0.8-18ubuntu1.1
+libavahi-common-data:amd64 0.8-18ubuntu1.1
+libavahi-common3:amd64 0.8-18ubuntu1.1
+libbabeltrace1:amd64 1.5.11-5build1
+libbinutils:amd64 2.46-3ubuntu2
+libblkid1:amd64 2.41.3-3ubuntu2.2
+libbrotli1:amd64 1.2.0-3build1
+libbsd0:amd64 0.12.2-2build2
+libbz2-1.0:amd64 1.0.8-6ubuntu0.1
+libc-bin 2.43-2ubuntu2.4
+libc-dev-bin 2.43-2ubuntu2.4
+libc-gconv-modules-extra:amd64 2.43-2ubuntu2.4
+libc6:amd64 2.43-2ubuntu2.4
+libc6-dbg:amd64 2.43-2ubuntu2.4
+libc6-dev:amd64 2.43-2ubuntu2.4
+libcap-ng0:amd64 0.8.5-4build5
+libcc1-0:amd64 16-20260322-1ubuntu1
+libcom-err2:amd64 1.47.2-3ubuntu4
+libcrypt-dev:amd64 1:4.5.1-1
+libcrypt1:amd64 1:4.5.1-1
+libctf-nobfd0:amd64 2.46-3ubuntu2
+libctf0:amd64 2.46-3ubuntu2
+libcups2t64:amd64 2.4.16-1ubuntu1.3
+libcurl3t64-gnutls:amd64 8.18.0-1ubuntu2.7
+libcurl4t64:amd64 8.18.0-1ubuntu2.7
+libdb5.3t64:amd64 5.3.28+dfsg2-10ubuntu1
+libdbus-1-3:amd64 1.16.2-2ubuntu4
+libdebconfclient0:amd64 0.280ubuntu1
+libdebuginfod-common 0.194-4
+libdebuginfod1t64:amd64 0.194-4
+libdpkg-perl 1.23.7ubuntu1
+libdw1t64:amd64 0.194-4
+libelf1t64:amd64 0.194-4
+libexpat1:amd64 2.7.4-1ubuntu0.2
+libext2fs2t64:amd64 1.47.2-3ubuntu4
+libfakeroot:amd64 1.37.2-1
+libffi8:amd64 3.5.2-4
+libfile-fcntllock-perl 0.22-4ubuntu6
+libfontconfig1:amd64 2.17.1-3ubuntu1
+libfreetype6:amd64 2.14.2+dfsg-1ubuntu0.1
+libgcc-15-dev:amd64 15.2.0-16ubuntu1
+libgcc-s1:amd64 16-20260322-1ubuntu1
+libgcrypt20:amd64 1.12.0-2ubuntu1.1
+libgdbm-compat4t64:amd64 1.26-1build1
+libgdbm6t64:amd64 1.26-1build1
+libglib2.0-0t64:amd64 2.88.0-1ubuntu0.1
+libglib2.0-data 2.88.0-1ubuntu0.1
+libgmp10:amd64 2:6.3.0+dfsg-5ubuntu2
+libgnutls30t64:amd64 3.8.12-2ubuntu1.1
+libgomp1:amd64 16-20260322-1ubuntu1
+libgpg-error0:amd64 1.58-2
+libgprofng0:amd64 2.46-3ubuntu2
+libgraphite2-3:amd64 1.3.14-11ubuntu1.1
+libgssapi-krb5-2:amd64 1.22.1-2ubuntu4.1
+libharfbuzz0b:amd64 12.3.2-2
+libhogweed6t64:amd64 3.10.2-1
+libhwasan0:amd64 16-20260322-1ubuntu1
+libidn2-0:amd64 2.3.8-4build1
+libipt2 2.1.2-3
+libisl23:amd64 0.27-1build1
+libitm1:amd64 16-20260322-1ubuntu1
+libjansson4:amd64 2.14-2build4
+libjpeg-turbo8:amd64 2.1.5-4ubuntu4
+libjpeg8:amd64 8c-2ubuntu12
+libjson-c5:amd64 0.18+ds-3
+libjsoncpp26:amd64 1.9.6-5
+libk5crypto3:amd64 1.22.1-2ubuntu4.1
+libkeyutils1:amd64 1.6.3-6ubuntu3
+libkrb5-3:amd64 1.22.1-2ubuntu4.1
+libkrb5support0:amd64 1.22.1-2ubuntu4.1
+libksba8:amd64 1.6.7-2build1
+liblcms2-2:amd64 2.17-1ubuntu0.2
+libldap-common 2.6.10+dfsg-1ubuntu5
+libldap2:amd64 2.6.10+dfsg-1ubuntu5
+liblocale-gettext-perl 1.07-8
+liblsan0:amd64 16-20260322-1ubuntu1
+liblz4-1:amd64 1.10.0-8
+liblzma5:amd64 5.8.3-1
+libmd0:amd64 1.1.0-2build4
+libmount1:amd64 2.41.3-3ubuntu2.2
+libmpc3:amd64 1.3.1-3
+libmpfr6:amd64 4.2.2-3
+libncursesw6:amd64 6.6+20251231-1
+libnettle8t64:amd64 3.10.2-1
+libnghttp2-14:amd64 1.68.0-2ubuntu0.2
+libnpth0t64:amd64 1.8-3build1
+libnspr4:amd64 2:4.38.2-1ubuntu1
+libnss3:amd64 2:3.120-1ubuntu2.1
+libp11-kit0:amd64 0.26.2-2
+libpam-modules:amd64 1.7.0-5ubuntu3.2
+libpam-modules-bin 1.7.0-5ubuntu3.2
+libpam-runtime 1.7.0-5ubuntu3.2
+libpam0g:amd64 1.7.0-5ubuntu3.2
+libpcre2-8-0:amd64 10.46-1build1
+libpcsclite1:amd64 2.4.1-1
+libperl5.40:amd64 5.40.1-7ubuntu0.3
+libpng16-16t64:amd64 1.6.57-1
+libproc2-0:amd64 2:4.0.4-9ubuntu1
+libpsl5t64:amd64 0.21.2-1.1build2
+libpython3.14:amd64 3.14.4-1ubuntu0.2
+libpython3.14-minimal:amd64 3.14.4-1ubuntu0.2
+libpython3.14-stdlib:amd64 3.14.4-1ubuntu0.2
+libquadmath0:amd64 16-20260322-1ubuntu1
+libreadline8t64:amd64 8.3-4
+librhash1:amd64 1.4.6-1.1
+librtmp1:amd64 2.4+20151223.gitfa8646d.1-3
+libsasl2-2:amd64 2.1.28+dfsg1-9ubuntu3
+libsasl2-modules:amd64 2.1.28+dfsg1-9ubuntu3
+libsasl2-modules-db:amd64 2.1.28+dfsg1-9ubuntu3
+libseccomp2:amd64 2.6.0-2ubuntu5
+libselinux1:amd64 3.9-4build1
+libsemanage-common 3.9-1build1
+libsemanage2:amd64 3.9-1build1
+libsepol2:amd64 3.9-2
+libsframe3:amd64 2.46-3ubuntu2
+libsmartcols1:amd64 2.41.3-3ubuntu2.2
+libsource-highlight-common 3.1.9-4.3build2
+libsource-highlight4t64:amd64 3.1.9-4.3build2
+libsqlite3-0:amd64 3.46.1-9ubuntu0.3
+libss2:amd64 1.47.2-3ubuntu4
+libssh2-1t64:amd64 1.11.1-1ubuntu0.26.04.4
+libssl3t64:amd64 3.5.5-1ubuntu3.5
+libstdc++-15-dev:amd64 15.2.0-16ubuntu1
+libstdc++6:amd64 16-20260322-1ubuntu1
+libsystemd0:amd64 259.5-0ubuntu3.4
+libtasn1-6:amd64 4.21.0-2
+libtext-charwidth-perl:amd64 0.04-11build4
+libtext-wrapi18n-perl 0.06-10
+libtinfo6:amd64 6.6+20251231-1
+libtsan2:amd64 16-20260322-1ubuntu1
+libubsan1:amd64 16-20260322-1ubuntu1
+libudev1:amd64 259.5-0ubuntu3.4
+libunistring5:amd64 1.3-2build1
+libuuid1:amd64 2.41.3-3ubuntu2.2
+libuv1t64:amd64 1.51.0-2ubuntu1
+libxml2-16:amd64 2.15.2+dfsg-0.1ubuntu0.2
+libxxhash0:amd64 0.8.3-2build1
+libzstd1:amd64 1.5.7+dfsg-3
+linux-libc-dev:amd64 7.0.0-31.31
+login 1:4.16.0-2+really2.41.3-3ubuntu2.2
+login.defs 1:4.17.4-2ubuntu3
+logsave 1.47.2-3ubuntu4
+lto-disabled-list 79
+make 4.4.1-3
+manpages 6.17-1
+manpages-dev 6.17-1
+mawk 1.3.4.20260129-1
+media-types 14.0.0build1
+mount 2.41.3-3ubuntu2.2
+ncurses-base 6.6+20251231-1
+ncurses-bin 6.6+20251231-1
+netbase 6.5build1
+openjdk-17-jre-headless:amd64 17.0.20.1+1-1~26.04
+openssl 3.5.5-1ubuntu3.5
+openssl-provider-legacy 3.5.5-1ubuntu3.5
+passwd 1:4.17.4-2ubuntu3
+patch 2.8-2build1
+perl 5.40.1-7ubuntu0.3
+perl-base 5.40.1-7ubuntu0.3
+perl-modules-5.40 5.40.1-7ubuntu0.3
+pinentry-curses 1.3.2-3ubuntu1
+procps 2:4.0.4-9ubuntu1
+publicsuffix 20260129.1928-1
+readline-common 8.3-4
+rpcsvc-proto 1.4.3-1build1
+rust-coreutils 0.8.0-0ubuntu3
+sed 4.9-2ubuntu1
+sensible-utils 0.0.26build1
+shared-mime-info 2.4-5build3
+sysvinit-utils 3.15-5ubuntu1
+tar 1.35+dfsg-4ubuntu0.4
+tzdata 2026c-0ubuntu0.26.04.1
+ubuntu-keyring 2023.11.28.1build1
+ucf 3.0052ubuntu1
+util-linux 2.41.3-3ubuntu2.2
+wget 1.25.0-2ubuntu4.4
+xdg-user-dirs 0.19-1
+xz-utils 5.8.3-1
+zlib1g:amd64 1:1.3.dfsg+really1.3.1-1ubuntu3.1
