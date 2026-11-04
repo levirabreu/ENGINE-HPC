@@ -143,6 +143,8 @@ O `apptainer exec` abre o container e executa, dentro dele, o comando indicado �
 
 No script de exemplo, cada item testa uma ferramenta diferente: a versão do CPLEX, um problema de mochila resolvido com Python-MIP, o mesmo problema resolvido com Julia/JuMP/CPLEX, uma regressão linear em R, um problema de agendamento com o CP Optimizer, dois problemas de roteirização (VRPSolverEasy e PyVRP), um problema de agendamento (PyJobShop), o pacote `irace` e a compilação/execução de um programa simples em C++.
 
+Segue o [link](https://github.com/levirabreu/ENGINE-HPC/tree/main/tutorial) para outros exemplos de arquivos .sh (em c++, python e julia) para teste.
+
 ---
 
 ## 5. Executando um arquivo em vez de um comando em linha
