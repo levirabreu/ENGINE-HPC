@@ -12,10 +12,14 @@ Link para tutorial em vídeo de como utilizar e executar jobs no HPC da UFC: [Li
 
 É uma imagem de container Apptainer (equivalente a uma "caixa" com um sistema operacional Ubuntu completo dentro dela) que já vem com um ambiente de pesquisa pronto, incluindo:
 
-- **Python** (com numpy, pandas, scipy, python-mip, docplex, VRPSolverEasy, PyVRP, PyJobShop, entre outros)
-- **Julia** (com JuMP, CPLEX.jl, DataFrames, Distributions, StatsBase, BrkgaMpIpr, RuleMiner)
+- **Python** (com numpy, pandas, scipy, python-mip, or-tools, docplex, VRPSolverEasy, PyVRP, PyJobShop, entre outros)
+- **Julia** (com JuMP, CPLEX.jl, GUROBI.jl, DataFrames, Distributions, StatsBase, BrkgaMpIpr, RuleMiner)
 - **R** (com o pacote `irace`)
-- **IBM ILOG CPLEX** (solver de otimização, utilizável a partir de Python, Julia ou diretamente)
+- **IBM ILOG CPLEX 22.2.0.0** (solver de programação linear, utilizável a partir de Python, Julia ou diretamente)
+- **Gurobi 14.0.0** (solver de programação linear, utilizável a partir de Python, Julia [JuMP com versão do Gurobi 13.0.3] ou diretamente) - necessário o arquivo de licença WLS `gurobi.lic` no diretório de origem do usuário. Adquira a licença acadêmica e o arquivo em: [Licença WLS Academic](https://portal.gurobi.com/iam/home/), utilizando um e-mail acadêmico da UFC.
+- **IBM ILOG CP OPTIMIZER 22.2.0.0** (solver de programação por restrições, utilizável a partir de Python ou diretamente)
+- **Hexaly 15.0.0** (solver de programação por restrições, utilizável a partir de Python ou diretamente) - necessário o arquivo de licença  `license.dat` no diretório de origem do usuário. Adquira a licença acadêmica e o arquivo em: [Licença Hexaly](https://www.hexaly.com/account/on-premise-licenses), utilizando um e-mail acadêmico da UFC.
+- **OptalCP 2026.11.0** (solver de programação por restrições, utilizável a partir de Python ou diretamente)
 - **Compiladores C/C++** (g++)
 
 Como tudo já está instalado dentro da imagem, qualquer pessoa do grupo de pesquisa pode rodar seus experimentos sem precisar instalar nada manualmente no cluster — basta usar o arquivo `.sif`.
