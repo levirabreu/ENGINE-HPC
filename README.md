@@ -12,9 +12,9 @@ Link para tutorial em vídeo de como utilizar e executar jobs no HPC da UFC: [Li
 
 É uma imagem de container Apptainer (equivalente a uma "caixa" com um sistema operacional Ubuntu completo dentro dela) que já vem com um ambiente de pesquisa pronto, incluindo:
 
-- **Python** (com numpy, pandas, scipy, python-mip, or-tools, docplex, VRPSolverEasy, PyVRP, PyJobShop, entre outros)
-- **Julia** (com JuMP, CPLEX.jl, GUROBI.jl, DataFrames, Distributions, StatsBase, BrkgaMpIpr, RuleMiner)
-- **R** (com o pacote `irace`)
+- **Python 3.14.7** (com numpy, pandas, scipy, python-mip, or-tools, docplex, VRPSolverEasy, PyVRP, PyJobShop, entre outros)
+- **Julia 1.13.1** (com JuMP, CPLEX.jl, GUROBI.jl, DataFrames, Distributions, StatsBase, BrkgaMpIpr, RuleMiner)
+- **R 4.5.3** (com o pacote `irace`)
 - **IBM ILOG CPLEX 22.2.0.0** (solver de programação linear, utilizável a partir de Python, Julia ou diretamente)
 - **Gurobi 14.0.0** (solver de programação linear, utilizável a partir de Python, Julia [JuMP com versão do Gurobi 13.0.3] ou diretamente) - necessário o arquivo de licença WLS `gurobi.lic` no diretório de origem do usuário. Adquira a licença acadêmica e o arquivo em: [Licença WLS Academic](https://portal.gurobi.com/iam/home/), utilizando um e-mail acadêmico da UFC.
 - **IBM ILOG CP OPTIMIZER 22.2.0.0** (solver de programação por restrições, utilizável a partir de Python ou diretamente)
