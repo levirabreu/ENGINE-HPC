@@ -1,6 +1,6 @@
 # Tutorial: Executando Jobs no HPC da UFC com o Container `ubuntu_engine_hpc.sif`
 
-Este tutorial explica, passo a passo, como professores do curso de Engenharia de Produção podem usar o container Apptainer `ubuntu_engine_hpc.sif` para rodar seus próprios códigos (Python, Julia, R, C++) no cluster HPC da UFC, usando o Slurm (`sbatch`/`squeue`). O uso do contêiner é somente para fins acadêmicos e não comerciais.
+Este tutorial explica, passo a passo, como professores e orientandos do curso de Engenharia de Produção podem usar o container Apptainer `ubuntu_engine_hpc.sif` para rodar seus próprios códigos (Python, Julia, R, C++) no cluster HPC da UFC, usando o Slurm (`sbatch`/`squeue`). O uso do contêiner é somente para fins acadêmicos e não comerciais.
 
 Link para o download do contêiner: [ubuntu_engine_hpc.sif](https://filesender.rnp.br/?s=download&token=869b6c7d-7e7d-4016-ba04-c4b3f78880ad) 
 
