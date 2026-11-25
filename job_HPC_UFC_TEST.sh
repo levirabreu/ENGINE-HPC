@@ -3,13 +3,22 @@
 #SBATCH --cpus-per-task=1       # numero de threads OpenMP por processo
 #SBATCH -J HPC_TESTE_ENVS       # nome do job, aparece no squeue
 #SBATCH --time=00:30:00         # tempo maximo de execucao (hh:mm:ss)
-#SBATCH --mem=128000              # memoria total do job, em MB
+#SBATCH --mem=8000              # memoria total do job, em MB
 #SBATCH --nodes=1               # numero de nos alocados
 #SBATCH -o %x-%j.out            # arquivo de saida: nome_do_job-JOBID.out
 #SBATCH -p cpuq                 # particao (fila) utilizada
 
 #SBATCH --mail-type=END,FAIL    # eventos que disparam e-mail (fim ou falha do job)
 #SBATCH --mail-user=levi.abreu@ufc.br # endereco para envio das notificacoes
+
+# ==========================================
+# TRATAMENTO DE ERROS
+# ==========================================
+
+set -Eeuo pipefail
+
+trap 'rc=$?; echo "[FAIL] Job ${SLURM_JOB_ID:-unknown}: erro na linha ${LINENO}, codigo ${rc}. Comando: ${BASH_COMMAND}" >&2; exit "$rc"' ERR
+
 
 # OpenMP settings:
 export OMP_NUM_THREADS=1
@@ -30,7 +39,7 @@ echo "Iniciando testes no Apptainer: $IMAGE"
 echo "========================================"
 
 echo -e "\n1. Testando CPLEX: versao do solver"
-echo quit | apptainer exec $IMAGE cplex | head -3
+printf 'quit\n' | apptainer exec "$IMAGE" cplex | sed -n '1,3p'
 
 echo -e "\n2. Testando Python: mochila com python-mip (HiGHS)"
 apptainer exec $IMAGE python3 -c "
@@ -139,6 +148,68 @@ apptainer exec $IMAGE Rscript -e 'library(irace); cat("irace OK! Versao:", as.ch
 echo -e "\n10. Testando C++: compilacao e execucao com g++"
 apptainer exec $IMAGE bash -c 'echo "#include <iostream>
 int main(){int s=0; for(int i=1;i<=10;i++) s+=i; std::cout << \"C++ OK: soma 1..10 = \" << s << std::endl; return 0;}" | g++ -x c++ - -o /tmp/cpp_test && /tmp/cpp_test'
+
+echo -e "\n11. Testando Gurobi (python gurobipy): problema da mochila"
+apptainer exec $IMAGE python3 -c "
+import gurobipy as gp
+from gurobipy import GRB
+p=[1,2,5,6,7]; v=[1,6,18,22,28]; cap=11
+m = gp.Model()
+x = m.addVars(len(p), vtype=GRB.BINARY)
+m.setObjective(gp.quicksum(v[i]*x[i] for i in range(len(p))), GRB.MAXIMIZE)
+m.addConstr(gp.quicksum(p[i]*x[i] for i in range(len(p))) <= cap)
+m.optimize()
+print(f'Gurobi OK: valor_maximo={m.ObjVal}')"
+
+echo -e "\n12. Testando Gurobi (julia JuMP+Gurobi): problema da mochila"
+apptainer exec $IMAGE julia -e '
+using JuMP, Gurobi
+p=[1,2,5,6,7]; v=[1,6,18,22,28]; cap=11; n=length(p)
+model = Model(Gurobi.Optimizer)
+@variable(model, x[1:n], Bin)
+@objective(model, Max, sum(v[i]*x[i] for i in 1:n))
+@constraint(model, sum(p[i]*x[i] for i in 1:n) <= cap)
+optimize!(model)
+println("JuMP+Gurobi OK: valor_maximo=", objective_value(model))'
+
+echo -e "\n13. Testando CPLEX (julia JuMP): problema da mochila"
+apptainer exec ubuntu_engine_hpc.sif julia -e '
+using JuMP, CPLEX
+p=[1,2,5,6,7]; v=[1,6,18,22,28]; cap=11; n=length(p)
+model=Model(CPLEX.Optimizer)
+@variable(model, x[1:n], Bin)
+@objective(model, Max, sum(v[i]*x[i] for i in 1:n))
+@constraint(model, sum(p[i]*x[i] for i in 1:n) <= cap)
+optimize!(model)
+println("JuMP+CPLEX OK: status=", termination_status(model), ", valor_maximo=", objective_value(model))'
+
+echo -e "\n14. Testando HEXALY: versao do solver"
+echo quit | apptainer exec $IMAGE hexaly 
+
+echo -e "\n15. Testando Python: mochila com hexaly"
+apptainer exec $IMAGE python3 -c "
+import hexaly.optimizer
+p=[1,2,5,6,7]; v=[1,6,18,22,28]; cap=11; n=len(p)
+with hexaly.optimizer.HexalyOptimizer() as optimizer:
+    model = optimizer.model
+    x = [model.bool() for i in range(n)]
+    model.constraint(model.sum(p[i]*x[i] for i in range(n)) <= cap)
+    obj = model.sum(v[i]*x[i] for i in range(n))
+    model.maximize(obj)
+    model.close()
+    optimizer.param.time_limit = 3
+    optimizer.solve()
+    print(f'Hexaly OK: valor_maximo={obj.value}, itens={[i for i in range(n) if x[i].value == 1]}')"
+
+echo -e "\n16. Testando OptalCP (OptalCP CPO): agendamento simples"
+apptainer exec $IMAGE python3 -c "
+from optalcp_cpo.model import CpoModel
+m = CpoModel()
+x = m.integer_var(0, 10, 'x')
+m.add(x >= 3)
+m.minimize(x)
+s = m.solve(log_output=True)
+print(f'Docplex CP Optimizer OK: x = {s.get_value(x)}')"
 
 echo -e "\nTestes finalizados com sucesso às:"
 date
