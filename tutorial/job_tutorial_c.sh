@@ -11,6 +11,14 @@
 #SBATCH --mail-type=END,FAIL    # eventos que disparam e-mail (fim ou falha do job)
 #SBATCH --mail-user=levi.abreu@ufc.br # endereco para envio das notificacoes
 
+# ==========================================
+# TRATAMENTO DE ERROS
+# ==========================================
+
+set -Eeuo pipefail
+
+trap 'rc=$?; echo "[FAIL] Job ${SLURM_JOB_ID:-unknown}: erro na linha ${LINENO}, codigo ${rc}. Comando: ${BASH_COMMAND}" >&2; exit "$rc"' ERR
+
 # OpenMP settings:
 export OMP_NUM_THREADS=1
 export MKL_NUM_THREADS=1
