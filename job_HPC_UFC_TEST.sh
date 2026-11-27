@@ -19,7 +19,6 @@ set -Eeuo pipefail
 
 trap 'rc=$?; echo "[FAIL] Job ${SLURM_JOB_ID:-unknown}: erro na linha ${LINENO}, codigo ${rc}. Comando: ${BASH_COMMAND}" >&2; exit "$rc"' ERR
 
-
 # OpenMP settings:
 export OMP_NUM_THREADS=1
 export MKL_NUM_THREADS=1
